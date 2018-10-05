@@ -1,0 +1,17 @@
+﻿CREATE DATABASE `correo` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+DROP TABLE IF EXISTS `correo`.`correos`;
+CREATE TABLE  `correo`.`correos` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `correo` varchar(70) NOT NULL,
+  `pass` varbinary(70) NOT NULL,
+  `id_usuario` varchar(70) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `correo`.`usuarios`;
+CREATE TABLE  `correo`.`usuarios` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(70) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
